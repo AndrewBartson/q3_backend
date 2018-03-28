@@ -64,12 +64,24 @@ const states_summary = [
   { 'id': 49, 'key': 49, 'regionName':'Wyoming','code':'WY', 'electoral_votes': 3, 'group': 1, 'margin': 46.30 }
 ];
 
+let routes = require('./routes');
+app.use(routes.candidates);
+app.use(routes.american_state);
+app.use(routes.candidate_state);
+
 app.get('/summary', (req, res, next) => {
   res.json({ states_summary })
 })
 
-// const routes = require('./routes')
-// app.use(routes)
+// runs if flow of control gets here
+app.use((req, res, next) => {
+  res.status(404).json({ error: { message: 'Not found' }})
+})
+// runs whenever next is called with a parameter, not empty.
+app.use((err, req, res, next) => {
+  console.log('err.status - ', err.status);
+  res.status(500).json({error: err })
+})
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
