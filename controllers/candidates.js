@@ -24,6 +24,7 @@ function getCandidateByIdController(req, res, next) {
           next({message: 'ID not found'});
         }
       })
+      .catch(err => console.log(err))
     }
 }
 
