@@ -13,9 +13,9 @@ exports.up = function(knex, Promise) {
 
 //TOTAL POPULAR VOTE
 
-    // table.integer('Color Group')
-    //   .notNullable()
-    //   .defaultsTo(-1)
+    table.integer('color_group')
+      .notNullable()
+      .defaultsTo(-1)
   })
 };
 

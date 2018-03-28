@@ -4,7 +4,9 @@ const port = process.env.PORT || 3002
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cors = require('cors')
+const knex = require('./db');
 
+app.disable('x-powered-by');
 app.use(morgan('dev'))
 app.use(cors())
 app.use(bodyParser.json())

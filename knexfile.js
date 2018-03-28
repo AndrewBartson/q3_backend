@@ -5,9 +5,13 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      filename: 'postgres://localhost:5432/election_data'
-    }
+    connection:  'postgres://localhost/election_data',
+    migrations: {
+        directory: __dirname + '/migrations',
+    },
+    seeds: {
+      directory: __dirname + '/seeds',
+    },
   },
 
   production: {
