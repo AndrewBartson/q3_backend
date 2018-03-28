@@ -18,8 +18,8 @@ exports.up = function(knex, Promise) {
       .notNullable()
     table.float('percentage_pop_vote')
       .notNullable()
-    table.boolean('winner')
-      .defaultsTo('False')
+    table.integer('electoral_votes')
+      .notNullable()
   })
 };
 

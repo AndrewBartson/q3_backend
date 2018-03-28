@@ -9,7 +9,8 @@ exports.seed = function(knex, Promise) {
         {id: 2, party: 'Democrat', presidential_candidate: "Hillary R. Clinton", vice_president_candidate: "Timothy Kaine"},
         {id: 3, party: 'Libertarian', presidential_candidate: "Gary Johnson", vice_president_candidate: "William F. Feld"},
         {id: 4, party: 'Green', presidential_candidate: "Dr. Jill Stein", vice_president_candidate: "Ajamu Baraka"},
-        {id: 5, party: 'Independent', presidential_candidate: "Evan McMullin", vice_president_candidate: "Nathan Johnson"}
+        {id: 5, party: 'Independent', presidential_candidate: "Evan McMullin", vice_president_candidate: "Nathan Johnson"},
+        {id: 6, party: 'Other', presidential_candidate: "Various", vice_president_candidate: "Various"}
       ]);
     }).then(() => {
       return knex.raw(
