@@ -68,10 +68,11 @@ let routes = require('./routes');
 app.use(routes.candidates);
 app.use(routes.american_state);
 app.use(routes.candidate_state);
-
+app.use(routes.summary);
+/*
 app.get('/summary', (req, res, next) => {
   res.json({ states_summary })
-})
+})*/
 
 // runs if flow of control gets here
 app.use((req, res, next) => {

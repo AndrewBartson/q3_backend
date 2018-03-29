@@ -12,9 +12,7 @@ function getCandidateByIdController(req, res, next) {
     return next({message: 'Invalid ID, not a number'});
   }
   else {
-    console.log("hi")
     model.candidates.getCandidateById(req.params.id)
-
       .then((result) => {
         if(result) {
           res.status(200).json(result);

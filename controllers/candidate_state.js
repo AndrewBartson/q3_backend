@@ -13,7 +13,6 @@ function getCandidateStateByIdController(req, res, next) {
   }
   else {
     model.candidate_state.getCandidateStateById(req.params.id)
-
       .then((result) => {
         if(result) {
           res.status(200).json(result);
