@@ -3,16 +3,12 @@ exports.up = function(knex, Promise) {
     table.increments()
     table.string('state_name')
       .notNullable()
-      .defaultsTo('')
     table.string('state_code')
       .notNullable()
-      .defaultsTo('')
     table.integer('electoral_votes')
       .notNullable()
-      .defaultsTo(-1)
-
-//TOTAL POPULAR VOTE
-
+    table.integer('total_pop_vote')
+      .notNullable()
     table.integer('color_group')
       .notNullable()
       .defaultsTo(-1)
