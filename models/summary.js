@@ -1,11 +1,6 @@
 let knex = require('../db');
 let util = require('util');
 
-// function getSummary() {
-//    return knex('american_state');
-// }
-
-
 function getSummary() {
   return knex
    .select('american_state.state_name as regionName',
