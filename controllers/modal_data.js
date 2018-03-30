@@ -3,8 +3,6 @@ let model = require('../models');
 function getModalDataController(req, res, next) {
   let stateCode = req.params.state_code;
 
-  console.log('STATE CODE: ' + stateCode);
-  console.log('params: ' + req.params)
 
   model.modal_data.getModalData(stateCode)
           .then((result) => {
@@ -20,7 +18,7 @@ function getModalDataController(req, res, next) {
                   popularVotePercentage: row.percentage_pop_vote,
                   popularVotes: row.popular_votes,
                   marginOfVictory: row.margin_of_victory,
-
+                  state: row.state_name
                 }
               })
               res.status(200).json({candidates: result});
