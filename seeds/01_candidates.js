@@ -1,9 +1,7 @@
 
 exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
   return knex('candidates').del()
     .then(function () {
-      // Inserts seed entries
       return knex('candidates').insert([
         {id: 1, party: 'Republican', presidential_candidate: "Donald J. Trump", vice_president_candidate: "Michael R. Pence"},
         {id: 2, party: 'Democrat', presidential_candidate: "Hillary R. Clinton", vice_president_candidate: "Timothy Kaine"},
