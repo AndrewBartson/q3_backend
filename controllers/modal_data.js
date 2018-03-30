@@ -3,7 +3,6 @@ let model = require('../models');
 function getModalDataController(req, res, next) {
   let stateCode = req.params.state_code;
 
-
   model.modal_data.getModalData(stateCode)
           .then((result) => {
             if(result) {
